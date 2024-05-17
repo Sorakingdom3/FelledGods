@@ -23,7 +23,7 @@ public class EncounterData : ScriptableObjectBase
         // Copy other properties here if needed
         return newEncounter;
     }
-
+#if UNITY_EDITOR
     [PropertyOrder(-1)]
     [Button("Generate Id", ButtonSizes.Medium, 0)]
     protected override void GenerateUniqueId()
@@ -47,4 +47,5 @@ public class EncounterData : ScriptableObjectBase
         }
         Id = prefix + id.ToString("D4");
     }
+#endif
 }

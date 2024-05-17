@@ -14,7 +14,7 @@ public class ClassData : ScriptableObjectBase
     public Sprite Sprite;
     public CardData[] BaseDeck;
     public CardData[] ClassCards;
-
+#if UNITY_EDITOR
     [PropertyOrder(-1)]
     [Button("Generate Id", ButtonSizes.Medium, 0)]
     protected override void GenerateUniqueId()
@@ -39,5 +39,5 @@ public class ClassData : ScriptableObjectBase
 
         Id = prefix + id.ToString("D4");
     }
-
+#endif
 }

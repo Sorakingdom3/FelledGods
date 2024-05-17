@@ -16,7 +16,7 @@ MonoBehaviour:
   Name: Light Armor
   Description: 
   Cost: 0
-  CardSprite: {fileID: 21300000, guid: cc23a5e877180c940bfa40d8cf492d26, type: 3}
+  CardSprite: {fileID: 1954812337, guid: f0954b94031095642a90c789fab3ca3f, type: 3}
   BorderSprite: {fileID: -1336848499, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
   Type: 2
   Class: 0

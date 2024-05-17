@@ -19,6 +19,7 @@ public class CardData : ScriptableObjectBase
     [SerializeField, SerializeReference]
     public List<Effect> Effects;
 
+#if UNITY_EDITOR
     [PropertyOrder(-1)]
     [Button("Generate Id", ButtonSizes.Medium, 0)]
     protected override void GenerateUniqueId()
@@ -43,6 +44,7 @@ public class CardData : ScriptableObjectBase
 
         Id = prefix + id.ToString("D4");
     }
+#endif
     public override string ToString()
     {
         return JsonUtility.ToJson(this);

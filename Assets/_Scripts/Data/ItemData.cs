@@ -14,7 +14,7 @@ public class ItemData : ScriptableObjectBase
 
     [SerializeField, SerializeReference]
     public Effect Effect;
-
+#if UNITY_EDITOR
     [PropertyOrder(-1)]
     [Button("Generate Id", ButtonSizes.Medium, 0)]
     protected override void GenerateUniqueId()
@@ -39,5 +39,5 @@ public class ItemData : ScriptableObjectBase
 
         Id = prefix + id.ToString("D4");
     }
-
+#endif
 }
