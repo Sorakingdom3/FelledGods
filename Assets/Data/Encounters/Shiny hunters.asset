@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f7eef053622fa5439deaec5d7c592ce, type: 3}
+  m_Name: Shiny hunters
+  m_EditorClassIdentifier: 
+  Id: B0003
+  Name: Shiny Hunters
+  Description: 
+  enemies:
+  - {fileID: 11400000, guid: 971017231a5567b4992829d2ca3acda4, type: 2}
+  - {fileID: 11400000, guid: 70cd5c5cd00e35b4a96ac961d227c5ed, type: 2}
+  Type: 3

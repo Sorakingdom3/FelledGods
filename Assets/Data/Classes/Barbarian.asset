@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e0d5f9bd84332449da56306167c95a, type: 3}
+  m_Name: Barbarian
+  m_EditorClassIdentifier: 
+  Id: P0001
+  Name: Barbarian
+  Description: A fierce warrior that has trained its body beyond the natural constitution.
+    A fighter that hits first and asks second, willing to die fighting than a shameful
+    retreat.
+  BaseHealth: 12
+  BaseEnergy: 3
+  BaseHandSize: 7
+  BaseStats:
+    Strength: 15
+    Dexterity: 13
+    Constitution: 14
+    Intelligence: 8
+    Wisdom: 10
+    Charisma: 12
+    StrMod: 2
+    DexMod: 1
+    ConMod: 2
+    IntMod: -1
+    WisMod: 0
+    ChaMod: 1
+  Sprite: {fileID: 21300000, guid: 0f7d0c1d0b0a05c47b823c1b6896151f, type: 3}
+  BaseDeck:
+  - {fileID: 11400000, guid: b652bf3953c09f1419d1e98cfaf8c4d7, type: 2}
+  - {fileID: 11400000, guid: b652bf3953c09f1419d1e98cfaf8c4d7, type: 2}
+  - {fileID: 11400000, guid: b652bf3953c09f1419d1e98cfaf8c4d7, type: 2}
+  - {fileID: 11400000, guid: b652bf3953c09f1419d1e98cfaf8c4d7, type: 2}
+  - {fileID: 11400000, guid: b652bf3953c09f1419d1e98cfaf8c4d7, type: 2}
+  - {fileID: 11400000, guid: e5689c995d46fb64a8bdd3623f75f9ae, type: 2}
+  - {fileID: 11400000, guid: cc0e830b71894024795b37fe02aa3eec, type: 2}
+  - {fileID: 11400000, guid: cc0e830b71894024795b37fe02aa3eec, type: 2}
+  - {fileID: 11400000, guid: cc0e830b71894024795b37fe02aa3eec, type: 2}
+  - {fileID: 11400000, guid: cc0e830b71894024795b37fe02aa3eec, type: 2}
+  ClassCards:
+  - {fileID: 11400000, guid: 9b99d0a233c1d714b998fc33ee1ee440, type: 2}
+  - {fileID: 11400000, guid: f4eb00c36295b7d46901e1a1311bb9e2, type: 2}
+  - {fileID: 11400000, guid: 0ce0fa0934000d64ba3a271ee5061094, type: 2}
+  - {fileID: 11400000, guid: 52bfefb7e8fe0344e9a57982d3360e0f, type: 2}
+  - {fileID: 11400000, guid: 759485820bbae7245a046f2e8d7723ea, type: 2}
+  - {fileID: 11400000, guid: 086a448f64499434db5efb0d51ccdb4b, type: 2}
+  - {fileID: 11400000, guid: 9f82dd15e3acde6498a2cd6bc1ba6eaa, type: 2}
+  - {fileID: 11400000, guid: 2d370cee47f718244b77d95aa2c0088b, type: 2}
+  - {fileID: 11400000, guid: ed60921862a50074bb89cf616b516986, type: 2}
+  - {fileID: 11400000, guid: e5689c995d46fb64a8bdd3623f75f9ae, type: 2}
+  - {fileID: 11400000, guid: d28e722ca3196cd4a90d9dac976fb0f9, type: 2}
+  - {fileID: 11400000, guid: 00ab81f0e8916d543ac05d3815b3d94e, type: 2}
+  - {fileID: 11400000, guid: b652bf3953c09f1419d1e98cfaf8c4d7, type: 2}
+  - {fileID: 11400000, guid: 50288c8015aff5a4d95eebccc9f9798f, type: 2}
+  - {fileID: 11400000, guid: cc0e830b71894024795b37fe02aa3eec, type: 2}
+  - {fileID: 11400000, guid: 11475d12de529764ea4c5f7e65d4dee5, type: 2}

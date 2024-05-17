@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48500c20d9c60004ba93388d8eb2b0b2, type: 3}
+  m_Name: Goblin
+  m_EditorClassIdentifier: 
+  Id: E0001
+  Name: Goblin
+  Description: Green, small, vicious and drawn to shiny things.
+  BaseHealth: 20
+  Sprite: {fileID: 21300000, guid: a3e0e2d1e70d3bc4a8102da19fa31e87, type: 3}
+  Stats:
+    Strength: 14
+    Dexterity: 16
+    Constitution: 10
+    Intelligence: 9
+    Wisdom: 10
+    Charisma: 5
+    StrMod: 2
+    DexMod: 3
+    ConMod: 0
+    IntMod: -1
+    WisMod: 0
+    ChaMod: -3
+  Attacks:
+  - rid: 8509984996702814228
+  - rid: 8509985036023365815
+  Type: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 8509984996702814228
+      type: {class: DamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        Amount:
+          BaseAmount: 5
+          EnchantedAmount: 0
+        TargetType: 0
+        HasStatModifier: 1
+        StatType: 1
+    - rid: 8509985036023365815
+      type: {class: DefenseEffect, ns: , asm: Assembly-CSharp}
+      data:
+        Amount:
+          BaseAmount: 6
+          EnchantedAmount: 0
+        TargetType: 3
+        HasStatModifier: 1
+        StatType: 1

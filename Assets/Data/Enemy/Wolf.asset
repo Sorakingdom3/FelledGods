@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48500c20d9c60004ba93388d8eb2b0b2, type: 3}
+  m_Name: Wolf
+  m_EditorClassIdentifier: 
+  Id: E0003
+  Name: Wolf
+  Description: 
+  BaseHealth: 42
+  Sprite: {fileID: 21300000, guid: 177ce788d4d96bd439b216ef78326303, type: 3}
+  Stats:
+    Strength: 14
+    Dexterity: 14
+    Constitution: 10
+    Intelligence: 0
+    Wisdom: 0
+    Charisma: 0
+    StrMod: 2
+    DexMod: 2
+    ConMod: 0
+    IntMod: -5
+    WisMod: -5
+    ChaMod: -5
+  Attacks:
+  - rid: 8509985036023365820
+  - rid: 8509985079089954816
+  Type: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 8509985036023365820
+      type: {class: DamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        Amount:
+          BaseAmount: 10
+          EnchantedAmount: 0
+        TargetType: 0
+        HasStatModifier: 1
+        StatType: 1
+    - rid: 8509985079089954816
+      type: {class: DefenseEffect, ns: , asm: Assembly-CSharp}
+      data:
+        Amount:
+          BaseAmount: 8
+          EnchantedAmount: 0
+        TargetType: 3
+        HasStatModifier: 1
+        StatType: 1

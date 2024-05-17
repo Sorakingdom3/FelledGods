@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48500c20d9c60004ba93388d8eb2b0b2, type: 3}
+  m_Name: Slime
+  m_EditorClassIdentifier: 
+  Id: E0004
+  Name: Slime
+  Description: 
+  BaseHealth: 12
+  Sprite: {fileID: 21300000, guid: 296fb0e60ce1e394e9739160582e976e, type: 3}
+  Stats:
+    Strength: 10
+    Dexterity: 9
+    Constitution: 16
+    Intelligence: 0
+    Wisdom: 0
+    Charisma: 10
+    StrMod: 0
+    DexMod: -1
+    ConMod: 3
+    IntMod: -5
+    WisMod: -5
+    ChaMod: 0
+  Attacks:
+  - rid: 8509985051544912001
+  - rid: 8509985036023365816
+  Type: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 8509985036023365816
+      type: {class: DefenseEffect, ns: , asm: Assembly-CSharp}
+      data:
+        Amount:
+          BaseAmount: 1
+          EnchantedAmount: 0
+        TargetType: 3
+        HasStatModifier: 1
+        StatType: 2
+    - rid: 8509985051544912001
+      type: {class: DamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        Amount:
+          BaseAmount: 1
+          EnchantedAmount: 0
+        TargetType: 0
+        HasStatModifier: 1
+        StatType: 2
