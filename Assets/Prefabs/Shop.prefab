@@ -68,8 +68,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 459276363, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 1058129841, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.3
 --- !u!1 &4238905594792410253
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,12 +291,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6869616705117331511, guid: a713f9c13e574604b87b70e71f805fa6, type: 3}
       propertyPath: m_Type
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6869616705117331511, guid: a713f9c13e574604b87b70e71f805fa6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1288876834, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
+      objectReference: {fileID: -493548314, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
     - target: {fileID: 8706843282404853444, guid: a713f9c13e574604b87b70e71f805fa6, type: 3}
       propertyPath: m_Pivot.x
       value: 1

@@ -15,34 +15,26 @@ MonoBehaviour:
   Id: C0006
   Name: Body Slam
   Description: 
-  Cost: 2
+  Cost: 1
   CardSprite: {fileID: 1768297758, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
   BorderSprite: {fileID: -1336848499, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
   Type: 0
   Class: 0
   Rarity: 0
   Level: 0
+  ExhaustsBase: 0
+  ExhaustsEnhanced: 0
   Effects:
-  - rid: 8509985036023365793
   - rid: 8509985036023365794
   references:
     version: 2
     RefIds:
-    - rid: 8509985036023365793
-      type: {class: DamageEffect, ns: , asm: Assembly-CSharp}
-      data:
-        Amount:
-          BaseAmount: 3
-          EnchantedAmount: 5
-        TargetType: 0
-        HasStatModifier: 1
-        StatType: 2
     - rid: 8509985036023365794
       type: {class: DamageEffect, ns: , asm: Assembly-CSharp}
       data:
         Amount:
-          BaseAmount: 2
-          EnchantedAmount: 4
+          BaseAmount: 4
+          EnchantedAmount: 9
+        Level: 0
         TargetType: 0
-        HasStatModifier: 1
         StatType: 1

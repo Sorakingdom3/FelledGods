@@ -22,7 +22,8 @@ MonoBehaviour:
   Class: 0
   Rarity: 0
   Level: 0
-  AvailableTarget: 1
+  ExhaustsBase: 0
+  ExhaustsEnhanced: 0
   Effects:
   - rid: 4928853984405618688
   references:
@@ -32,8 +33,8 @@ MonoBehaviour:
       type: {class: DamageEffect, ns: , asm: Assembly-CSharp}
       data:
         Amount:
-          BaseAmount: 3
-          EnchantedAmount: 5
+          BaseAmount: 4
+          EnchantedAmount: 7
+        Level: 0
         TargetType: 0
-        HasStatModifier: 1
         StatType: 0

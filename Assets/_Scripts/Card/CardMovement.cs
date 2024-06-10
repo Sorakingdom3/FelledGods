@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
+public class CardMovement : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] RectTransform _rectTransform;
     [SerializeField] CardDisplay _card;
@@ -21,7 +21,6 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
     [SerializeField] GameObject _glowEffect;
     [SerializeField] GameObject _playArrow;
 
-
     private void Awake()
     {
         _player = FindAnyObjectByType<Player>();
@@ -36,70 +35,54 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
         switch (_currentState)
         {
             case 1:
-                HandleHoverState();
+                HandleHover();
                 break;
             case 2:
-                HandleDragState();
-                if (!Input.GetMouseButton(0) && _rectTransform.localPosition.y > _cardPlay.y)
+                HandleMovement();
+                if (Input.GetMouseButtonDown(0) && _rectTransform.localPosition.y > _cardPlay.y && !(_card._cardData.Type == Enums.CardType.Weapon || _card._cardData.Type == Enums.CardType.Spell))
+                {
                     _player.PlayCard(_card, _player, _player);
-                else if (!Input.GetMouseButton(0))
+                }
+                else if (Input.GetMouseButtonDown(0) && !(_rectTransform.localPosition.y > _cardPlay.y))
+                {
                     TransitionToState0();
+                }
+                else if (Input.GetMouseButtonDown(1))
+                {
+                    TransitionToState0();
+                }
                 break;
             case 3:
-                HandlePlayState();
+                HandleAttackMovement();
                 if (Input.GetMouseButtonDown(1))
                 {
                     TransitionToState0();
                 }
-
                 break;
             default:
                 break;
         }
     }
 
-    private void HandlePlayState()
+    private void HandleAttackMovement()
     {
         _rectTransform.localPosition = Vector3.Lerp(_rectTransform.localPosition, _playPosition, _lerpFactor);
         _rectTransform.localRotation = Quaternion.identity;
         if (Input.mousePosition.y < _cardPlay.y)
         {
             _currentState = 2;
+            _rectTransform.position = Input.mousePosition;
             _playArrow.SetActive(false);
         }
-
     }
 
-    private void HandleDragState()
+    private void HandleMovement()
     {
-        // Set rotation to zero
         _rectTransform.localRotation = Quaternion.identity;
-    }
-
-    private void HandleHoverState()
-    {
-        _glowEffect.SetActive(true);
-        _rectTransform.localScale = _originalScale * _selectScale;
-    }
-
-    private void TransitionToState0()
-    {
-        // Reset Everything
-        _currentState = 0;
-
-        _rectTransform.localScale = _originalScale;
-        _rectTransform.localRotation = _originalRotation;
-        _rectTransform.localPosition = _originalPosition;
-        _player._battleController.EnemyClickedEvent.RemoveListener(PlayCard);
-        _glowEffect.SetActive(false);
-        _playArrow.SetActive(false);
-    }
-    public void OnDrag(PointerEventData eventData)
-    {
         if (_currentState == 2)
         {
             Vector2 localPointerPosition;
-            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(_canvas.GetComponent<RectTransform>(), eventData.position, eventData.pressEventCamera, out localPointerPosition))
+            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(_canvas.GetComponent<RectTransform>(), Camera.main.WorldToScreenPoint(Input.mousePosition), Camera.main, out localPointerPosition))
             {
                 _rectTransform.position = Vector3.Lerp(_rectTransform.position, Input.mousePosition, _lerpFactor);
 
@@ -112,23 +95,13 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
             }
         }
     }
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        if (_currentState == 1)
-        {
-            _currentState = 2;
-            _player._battleController.EnemyClickedEvent.AddListener(PlayCard);
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(_canvas.GetComponent<RectTransform>(), eventData.position, eventData.pressEventCamera, out OriginalPointerLocalPosition);
-            OriginalPanelLocalPosition = _rectTransform.localPosition;
-        }
-    }
 
-    private void PlayCard(Enemy enemy)
+    private void HandleHover()
     {
-        _player._battleController.EnemyClickedEvent.RemoveListener(PlayCard);
-        _player.PlayCard(_card, _player, enemy);
+        // Logica de Poner en Visor
+        _glowEffect.SetActive(true);
+        _rectTransform.localScale = _originalScale * _selectScale;
     }
-
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (_currentState == 0 && _player.IsPlayable(_card._cardData))
@@ -140,12 +113,40 @@ public class CardMovement : MonoBehaviour, IDragHandler, IPointerDownHandler, IP
             _currentState = 1;
         }
     }
-
     public void OnPointerExit(PointerEventData eventData)
     {
         if (_currentState == 1)
         {
             TransitionToState0();
+        }
+    }
+    private void TransitionToState0()
+    {
+        // Reset Everything
+        _currentState = 0;
+        _rectTransform.localScale = _originalScale;
+        _rectTransform.localRotation = _originalRotation;
+        _rectTransform.localPosition = _originalPosition;
+        _player._battleController.EnemyClickedEvent.RemoveListener(PlayCard);
+        _glowEffect.SetActive(false);
+        _playArrow.SetActive(false);
+    }
+    private void PlayCard(Enemy enemy)
+    {
+        _player._battleController.EnemyClickedEvent.RemoveListener(PlayCard);
+        _player.PlayCard(_card, _player, enemy);
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (_currentState == 1)
+        {
+            _currentState = 2;
+            _canvas.overrideSorting = true;
+            _canvas.sortingOrder = 2;
+            _player._battleController.EnemyClickedEvent.AddListener(PlayCard);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(_canvas.GetComponent<RectTransform>(), eventData.position, eventData.pressEventCamera, out OriginalPointerLocalPosition);
+            OriginalPanelLocalPosition = _rectTransform.localPosition;
         }
     }
 }

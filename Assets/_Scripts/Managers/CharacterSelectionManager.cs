@@ -25,6 +25,11 @@ public class CharacterSelectionManager : MonoBehaviour
             _previousButton.interactable = true;
             _nextButton.interactable = true;
         }
+        else
+        {
+            _previousButton.interactable = false;
+            _nextButton.interactable = false;
+        }
     }
 
     public void OnNextButtonPressed()
@@ -51,6 +56,6 @@ public class CharacterSelectionManager : MonoBehaviour
     }
     public void OnSelectButtonPressed()
     {
-        GameManager.Instance.SetClass(_classes[_currentCharacter], (int)_slider.value);
+        GameManager.Instance.SetClass(_classes[_currentCharacter]);
     }
 }

@@ -17,9 +17,10 @@ public class GameManager : MonoBehaviour
     List<List<Node>> _map;
 
     public Player Player;
-    int _stage = 1;
+    int _stage = 0;
     int _floor = 0;
     int _room = -1;
+    bool _runStarted = false;
 
     Node _currentRoom;
     int _seed;
@@ -49,11 +50,11 @@ public class GameManager : MonoBehaviour
         Random.InitState(Random.Range(0, 1000000));
     }
 
-    public void SetClass(ClassData classData, int difficulty)
+    public void SetClass(ClassData classData)
     {
         _floor = 0;
         _room = -1;
-
+        _runStarted = true;
         InitPlayer(classData);
         GenerateStage();
         UIManager.Instance.GoToBattle();
@@ -105,8 +106,9 @@ public class GameManager : MonoBehaviour
     private void GoToNextStage()
     {
         ++_stage;
+        Player.Heal(9999);
         if (_stage == 3)
-            EndRun();
+            EndRun(true);
         else
         {
             MapManager.ClearMap();
@@ -141,11 +143,9 @@ public class GameManager : MonoBehaviour
         Player.Heal(amount);
     }
 
-    public void EndRun()
+    public void EndRun(bool victory)
     {
-        MapManager.ResetMap();
-
-        UIManager.Instance.BackToMenu();
+        UIManager.Instance.ShowVictoryScreen(victory);
     }
 
     public List<CardData> GetDeck()
@@ -171,5 +171,25 @@ public class GameManager : MonoBehaviour
     public List<CardData> GetClassCards()
     {
         return DataManager.Instance.GetClassCards(Player.GetClass());
+    }
+
+    public bool HasRunStarted()
+    {
+        return _runStarted;
+    }
+
+    public void EndGame()
+    {
+        _runStarted = false;
+        MapManager.ResetMap();
+        BattleController.Instance.ResetArena();
+        UIManager.Instance.BackToMenu();
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UIManager.Instance.OnOptionsButtonPressed();
+        }
     }
 }

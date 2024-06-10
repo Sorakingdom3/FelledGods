@@ -121,7 +121,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 938803731897810278}
   m_Direction: 3
   m_Value: 1
-  m_Size: 0.3272727
+  m_Size: 0.3030303
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -195,9 +195,9 @@ RectTransform:
   - {fileID: 4450331411450362229}
   m_Father: {fileID: 3156300046621888303}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 951.5, y: -3300}
   m_SizeDelta: {x: 1400, y: 3300}
   m_Pivot: {x: 0.5, y: -0.000000022351742}
 --- !u!222 &4398023708931290020
@@ -228,8 +228,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 459276363, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 1058129841, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 0.3
+  m_PixelsPerUnitMultiplier: 0.32
 --- !u!1 &1509297614742818843
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,23 +306,23 @@ MonoBehaviour:
   m_text: '<size=150%><u>Legend</u></size>
 
 
-    <sprite=16> Unknown
+    <sprite=24> Unknown
 
 
-    <sprite=19>
+    <sprite=27>
     Inn
 
 
-    <sprite=21> Shop
+    <sprite=29> Shop
 
 
-    <sprite=20> Chest
+    <sprite=28> Chest
 
 
-    <sprite=17> Elite
+    <sprite=25> Elite
 
 
-    <sprite=18>
+    <sprite=26>
     Monster'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea12ce0f56c578f4a99641d62d07204f, type: 2}
@@ -425,7 +425,7 @@ RectTransform:
   m_Father: {fileID: 919474497336487493}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.30303025}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -485,7 +485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3967644964454380519
 RectTransform:
   m_ObjectHideFlags: 0
@@ -597,7 +597,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -110, y: 0}
+  m_AnchoredPosition: {x: -109.40991, y: 0}
   m_SizeDelta: {x: 250, y: 500}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &5809541888813395466
@@ -719,7 +719,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 3300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1617805310496507754
 MonoBehaviour:
@@ -922,8 +922,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -40}
+  m_SizeDelta: {x: 0, y: -80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &690441326249098645
 CanvasRenderer:
@@ -979,9 +979,25 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 3448071044624622108, guid: a713f9c13e574604b87b70e71f805fa6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HideMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 3448071044624622108, guid: a713f9c13e574604b87b70e71f805fa6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3448071044624622108, guid: a713f9c13e574604b87b70e71f805fa6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6079652070633773179, guid: a713f9c13e574604b87b70e71f805fa6, type: 3}
       propertyPath: m_Name
       value: BackButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6079652070633773179, guid: a713f9c13e574604b87b70e71f805fa6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6823624384938175424, guid: a713f9c13e574604b87b70e71f805fa6, type: 3}
       propertyPath: m_Name

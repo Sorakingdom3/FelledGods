@@ -16,14 +16,17 @@ MonoBehaviour:
   Name: Mace
   Description: Deals 6 + StrMod and 2 DefDBuff
   Cost: 2
-  CardSprite: {fileID: 1768297758, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
+  CardSprite: {fileID: 21300000, guid: f88c50f72b8ac7d4caba6045d04a01ab, type: 3}
   BorderSprite: {fileID: -1336848499, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
   Type: 0
   Class: 0
   Rarity: 0
   Level: 0
+  ExhaustsBase: 0
+  ExhaustsEnhanced: 0
   Effects:
   - rid: 4928853949495377920
+  - rid: 6257902369853145091
   references:
     version: 2
     RefIds:
@@ -31,8 +34,17 @@ MonoBehaviour:
       type: {class: DamageEffect, ns: , asm: Assembly-CSharp}
       data:
         Amount:
-          BaseAmount: 8
-          EnchantedAmount: 10
+          BaseAmount: 6
+          EnchantedAmount: 8
+        Level: 0
         TargetType: 0
-        HasStatModifier: 1
         StatType: 0
+    - rid: 6257902369853145091
+      type: {class: VulnerableEffect, ns: , asm: Assembly-CSharp}
+      data:
+        Amount:
+          BaseAmount: 2
+          EnchantedAmount: 3
+        Level: 0
+        TargetType: 0
+        StatType: 6

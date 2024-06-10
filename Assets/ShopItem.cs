@@ -26,7 +26,7 @@ public class ShopItem : MonoBehaviour
         {
             GameManager.Instance.Player.SubtractGold(_price);
             GameManager.Instance.AddItem(_type, _item);
-            _button.interactable = false;
+            Destroy(gameObject);
         }
     }
 }

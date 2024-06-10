@@ -70,7 +70,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -110,222 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icons_1
+      name: Card
       rect:
         serializedVersion: 2
-        x: 321
+        x: 480
         y: 640
-        width: 160.33333
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81e68407cccbe9741b92e15a7c08b066
-      internalID: -2018240874
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_2
-      rect:
-        serializedVersion: 2
-        x: 481
-        y: 640
-        width: 160.33333
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca218c35f689e7e4f8960ef0546b8f12
-      internalID: 901908765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_3
-      rect:
-        serializedVersion: 2
-        x: 641
-        y: 640
-        width: 160.33333
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4162b7d2dfb3f534bb34ef734b706dc0
-      internalID: -1845781582
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_4
-      rect:
-        serializedVersion: 2
-        x: 801
-        y: 640
-        width: 160.33333
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c023fc82b993d6b41999f03b854ac08c
-      internalID: -456091494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_5
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 480
-        width: 160.33333
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d6998e4ff62b5c4d8629f449b66af67
-      internalID: -421421201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_6
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 480
-        width: 160.33333
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 372f649cbf471354685c586d3db376e5
-      internalID: -755458271
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_7
-      rect:
-        serializedVersion: 2
-        x: 321
-        y: 480
-        width: 160.33333
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 189229b37b3b1cc45896ad07341a1ed2
-      internalID: 259158856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_8
-      rect:
-        serializedVersion: 2
-        x: 481
-        y: 480
-        width: 160.33333
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a65534f6903b80b4099f00052479166d
-      internalID: 1954812337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_9
-      rect:
-        serializedVersion: 2
-        x: 641
-        y: 480
-        width: 160.33333
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5a555771e9edd445bacb47532df51da
-      internalID: -394813867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_10
-      rect:
-        serializedVersion: 2
-        x: 801
-        y: 480
-        width: 160.33333
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e75df9fa441aa5049859276d76b8f626
-      internalID: -1103334288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_11
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 320
-        width: 160.33333
+        width: 160.5
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -341,12 +131,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_12
+      name: Deck
       rect:
         serializedVersion: 2
-        x: 161
-        y: 320
-        width: 160.33333
+        x: 640
+        y: 640
+        width: 160.5
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -362,12 +152,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_13
+      name: DiscardPile
       rect:
         serializedVersion: 2
-        x: 321
-        y: 320
-        width: 160.33333
+        x: 800
+        y: 640
+        width: 160.5
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -383,33 +173,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_14
+      name: stairs
       rect:
         serializedVersion: 2
-        x: 481
-        y: 320
-        width: 160.33333
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c06708a70af01543bbb9039ca3cc207
-      internalID: -2061947716
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icons_15
-      rect:
-        serializedVersion: 2
-        x: 641
-        y: 320
-        width: 160.33333
+        x: 160
+        y: 480
+        width: 160.5
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -425,12 +194,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_16
+      name: defense
       rect:
         serializedVersion: 2
-        x: 801
-        y: 320
-        width: 160.33333
+        x: 320
+        y: 480
+        width: 160.5
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -446,12 +215,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_17
+      name: shield
       rect:
         serializedVersion: 2
-        x: 1
-        y: 160
-        width: 160.33333
+        x: 480
+        y: 480
+        width: 160.5
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -467,12 +236,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_18
+      name: heal
       rect:
         serializedVersion: 2
-        x: 161
-        y: 160
-        width: 160.33333
+        x: 640
+        y: 482
+        width: 160
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -488,12 +257,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_19
+      name: cross
       rect:
         serializedVersion: 2
-        x: 321
-        y: 160
-        width: 160.33333
+        x: 800
+        y: 480
+        width: 160.5
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -509,12 +278,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_20
+      name: Coins
       rect:
         serializedVersion: 2
-        x: 481
-        y: 160
-        width: 160.33333
+        x: 0
+        y: 320
+        width: 160.5
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -533,9 +302,9 @@ TextureImporter:
       name: Icons_21
       rect:
         serializedVersion: 2
-        x: 641
-        y: 160
-        width: 160.33333
+        x: 160
+        y: 320
+        width: 160.5
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -554,9 +323,9 @@ TextureImporter:
       name: Icons_22
       rect:
         serializedVersion: 2
-        x: 801
-        y: 160
-        width: 160.33333
+        x: 320
+        y: 320
+        width: 160.5
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -572,12 +341,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_23
+      name: Heart
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 160.33333
+        x: 480
+        y: 320
+        width: 160.5
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -596,9 +365,9 @@ TextureImporter:
       name: Icons_24
       rect:
         serializedVersion: 2
-        x: 161
-        y: 0
-        width: 160.33333
+        x: 640
+        y: 320
+        width: 160.5
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -617,9 +386,9 @@ TextureImporter:
       name: Icons_25
       rect:
         serializedVersion: 2
-        x: 321
-        y: 0
-        width: 160.33333
+        x: 800
+        y: 320
+        width: 160.5
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -635,12 +404,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_26
+      name: UnknownEmpty
       rect:
         serializedVersion: 2
-        x: 481
-        y: 0
-        width: 160.33333
+        x: 0
+        y: 160
+        width: 160.5
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -656,12 +425,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_27
+      name: Elite Empty
       rect:
         serializedVersion: 2
-        x: 641
-        y: 0
-        width: 160.33333
+        x: 160
+        y: 160
+        width: 160.5
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -677,12 +446,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_28
+      name: fragile
       rect:
         serializedVersion: 2
-        x: 801
-        y: 0
-        width: 160.33333
+        x: 0
+        y: 800
+        width: 160.5
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -691,8 +460,407 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50906a1caa65de0489376cb275ab3a2f
+      spriteID: c13d4991f0d3c7541be98767a78486d2
+      internalID: -2097719868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rage
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 800
+        width: 160.5
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f2408aeada2a74b94fc9f3d39e011a
+      internalID: 1157093104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vulnerable
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 800
+        width: 160.5
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c512ed109d1aa49b977d444d14b760
+      internalID: 289375277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nurtured
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 800
+        width: 160.5
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0416002bc443984da6a5d4346bd77f8
+      internalID: -1968486692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: malnourished
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 800
+        width: 160.5
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c2e60dcd4180640ae1576fe28e785b
+      internalID: 236223033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mana
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800
+        width: 160.5
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ecae8b8f6dbe5649ade0d1f928d7b44
+      internalID: 13979325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 640
+        width: 160.5
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8f353ded453394cbf89e629665b429
+      internalID: -505650015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: swords
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 160.5
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c009d2514a9911a40a83e019ed04b03b
+      internalID: -1221966906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: strength
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 160.5
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac16c0ff31276a4091d601cc07ab240
+      internalID: -1529903260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frail
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 640
+        width: 160.5
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16cc4369ccf1ade4e9e16b524040c1ac
+      internalID: -659931373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyEmpty
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 160.5
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4246daa97fc2dd0468e7253a49717c74
       internalID: 1267918556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InnEmpty
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 160
+        width: 160.5
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed15356c35d50941b37c34fead61891
+      internalID: 1211283988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChestEmpty
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 160
+        width: 100
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a135b58aeef5dd44b809c16333f773b6
+      internalID: -2082513176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopEmpty
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 160
+        width: 160.5
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ca4ec7d230542419786f909aa6fc1d
+      internalID: 301064983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Unknown
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 128
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69350643c7072a742810f29936b0157b
+      internalID: -1590391813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Elite
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160.5
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e87f9212f863c54f9c3b1367b377656
+      internalID: -43663556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 0
+        width: 90
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b7ed6b986472241a845fb10e8f3894
+      internalID: 696026927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Inn
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160.5
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ccb650fe9255cd4ca56f1e5b3cef7b8
+      internalID: -1411949746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 0
+        width: 112
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf717f0a2cad8b444b90c47d768c61b4
+      internalID: 851721966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 100
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748f1c0e181813642a81b4cbe8853eb8
+      internalID: 1809257022
       vertices: []
       indices: 
       edges: []
@@ -708,35 +876,44 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Card: -1399115989
+      Chest: 851721966
+      ChestEmpty: -2082513176
+      Coins: 1741288488
+      Deck: 1254676021
+      DiscardPile: 1110513121
+      Elite: -43663556
+      Elite Empty: 189532476
+      Enemy: 696026927
+      EnemyEmpty: 1267918556
+      Frail: -659931373
+      Heart: 1373651885
       Icons_0: 1270354741
-      Icons_1: -2018240874
-      Icons_10: -1103334288
-      Icons_11: -1399115989
-      Icons_12: 1254676021
-      Icons_13: 1110513121
-      Icons_14: -2061947716
-      Icons_15: -461974210
-      Icons_16: -1035912127
-      Icons_17: -1464782794
-      Icons_18: -263203247
-      Icons_19: -15502376
-      Icons_2: 901908765
-      Icons_20: 1741288488
+      Icons_1: -422833484
       Icons_21: 1395173456
       Icons_22: 651280461
-      Icons_23: 1373651885
       Icons_24: 501576102
       Icons_25: -1216412203
-      Icons_26: 1173012072
-      Icons_27: 189532476
-      Icons_28: 1267918556
-      Icons_3: -1845781582
-      Icons_4: -456091494
-      Icons_5: -421421201
-      Icons_6: -755458271
-      Icons_7: 259158856
-      Icons_8: 1954812337
-      Icons_9: -394813867
+      Inn: -1411949746
+      InnEmpty: 1211283988
+      Map: -505650015
+      Shop: 1809257022
+      ShopEmpty: 301064983
+      Unknown: -1590391813
+      UnknownEmpty: 1173012072
+      cross: -15502376
+      defense: -1035912127
+      fragile: -2097719868
+      heal: -263203247
+      malnourished: 236223033
+      mana: 13979325
+      nurtured: -1968486692
+      rage: 1157093104
+      shield: -1464782794
+      stairs: -461974210
+      strength: -1529903260
+      swords: -1221966906
+      vulnerable: 289375277
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

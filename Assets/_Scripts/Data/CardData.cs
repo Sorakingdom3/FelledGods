@@ -10,14 +10,21 @@ public class CardData : ScriptableObjectBase
 {
 
     public int Cost;
+
     public Sprite CardSprite;
     public Sprite BorderSprite;
+
     public Enums.CardType Type;
     public Enums.Class Class;
     public Enums.RarityType Rarity;
     public Enums.ModifierType Level;
+    public bool ExhaustsBase = false;
+    public bool ExhaustsEnhanced = false;
+
     [SerializeField, SerializeReference]
     public List<Effect> Effects;
+
+
 
 #if UNITY_EDITOR
     [PropertyOrder(-1)]
@@ -45,6 +52,7 @@ public class CardData : ScriptableObjectBase
         Id = prefix + id.ToString("D4");
     }
 #endif
+
     public override string ToString()
     {
         return JsonUtility.ToJson(this);
@@ -75,5 +83,14 @@ public class CardData : ScriptableObjectBase
     public void Enchant()
     {
         Level = Enums.ModifierType.Enchanted;
+        foreach (var effect in Effects)
+        {
+            effect.Level = Level;
+        }
+    }
+
+    public bool Exhausts()
+    {
+        return (Level == Enums.ModifierType.Base) ? ExhaustsBase : ExhaustsEnhanced;
     }
 }

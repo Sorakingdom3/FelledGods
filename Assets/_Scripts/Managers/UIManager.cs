@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     public GameObject CardList;
     public GameObject OptionsMenu;
     public GameObject MapBackButton;
+    public GameObject VictoryScreen;
 
     private void Awake()
     {
@@ -81,6 +82,7 @@ public class UIManager : MonoBehaviour
         Map.SetActive(false);
         CardList.SetActive(false);
         OptionsMenu.SetActive(false);
+        VictoryScreen.SetActive(false);
     }
 
     public void OpenInn()
@@ -120,5 +122,11 @@ public class UIManager : MonoBehaviour
     public void CloseCardList()
     {
         CardList.SetActive(false);
+    }
+
+    public void ShowVictoryScreen(bool victory)
+    {
+        VictoryScreen.GetComponent<VictoryScreenController>().Setup(victory);
+        VictoryScreen.SetActive(true);
     }
 }

@@ -3,26 +3,22 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Enemy : MonoBehaviour, ITarget, IPointerClickHandler
+public class Enemy : Target, IPointerClickHandler
 {
+    BattleController _controller;
+    [SerializeField] EnemyUI _enemyUI;
+
     EnemyData _enemyData;
     string _enemyName;
-    int _maxHealth;
-    int _health;
-    int _defense;
 
-
-    Stats _stats;
+    Target _player;
     List<Effect> _attacks;
     Effect _intendedAction;
-    List<ITarget> _intendedTargets = new List<ITarget>();
-    ITarget _player;
-    BattleController _controller;
+    List<Target> _intendedTargets = new List<Target>();
 
-    [SerializeField] EnemyUI _enemyUI;
     // Puedes añadir más atributos según las necesidades de tu juego
 
-    public void Setup(BattleController battleController, EnemyData enemyData, ITarget player)
+    public void Setup(BattleController battleController, EnemyData enemyData, Target player)
     {
         _controller = battleController;
         _enemyName = enemyData.Name;
@@ -49,31 +45,34 @@ public class Enemy : MonoBehaviour, ITarget, IPointerClickHandler
         foreach (var target in _intendedTargets)
         {
             if (target != null)
-                _intendedAction.Apply(this, target, Enums.ModifierType.Base, _stats);
+                _intendedAction.Apply(this, target, _stats);
+            if (_intendedAction is DamageEffect)
+                DealDamage();
         }
         _intendedTargets.Clear();
-        _intendedAction = null;
     }
 
-    public void AddDefense(int amount)
+    public override void AddDefense(int amount)
     {
-        _defense += amount;
+        base.AddDefense(amount);
         _enemyUI.UpdateVisuals(_health, _maxHealth, _defense);
     }
 
-    public void DealDamage(int amount)
+    public override bool RecieveDamage(int amount)
     {
-        _health -= Mathf.Max(amount - _defense, 0);
-        _defense = Mathf.Max(_defense - amount, 0);
+        base.RecieveDamage(amount);
         _enemyUI.UpdateVisuals(_health, _maxHealth, _defense);
         if (_health <= 0)
+        {
             Die();
+            return true;
+        }
+        return false;
     }
 
-    public void Heal(int amount)
+    public override void Heal(int amount)
     {
-        _health += amount;
-        _health = Mathf.Min(_health, _maxHealth);
+        base.Heal(amount);
         _enemyUI.UpdateVisuals(_health, _maxHealth, _defense);
     }
 
@@ -107,5 +106,47 @@ public class Enemy : MonoBehaviour, ITarget, IPointerClickHandler
     {
         _defense = 0;
         _enemyUI.UpdateVisuals(_health, _maxHealth, _defense);
+    }
+
+    public void StartTurn()
+    {
+        var activeBuffs = Buffs.Keys;
+        List<Enums.BuffType> removed = new List<Enums.BuffType>();
+        foreach (var buff in activeBuffs)
+        {
+            var effect = Buffs[buff];
+            effect.HandleDuration();
+            if (effect.HasExpired())
+            {
+                removed.Add(buff);
+                _enemyUI.RemoveBuff(buff);
+            }
+            else
+            {
+                if (effect.HasGrowth())
+                {
+                    effect.ApplyGrowth(this);
+                }
+                _enemyUI.UpdateBuff(effect);
+            }
+        }
+        foreach (var removedBuff in removed)
+        {
+            Buffs.Remove(removedBuff);
+        }
+
+        ResetDefense();
+    }
+
+    public override void UpdateBuffUI(bool isNew, ModifierEffect effect)
+    {
+        if (isNew)
+        {
+            _enemyUI.AddNewBuff(effect);
+        }
+        else
+        {
+            _enemyUI.UpdateBuff(effect);
+        }
     }
 }

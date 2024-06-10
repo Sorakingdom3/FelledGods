@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -12,7 +13,7 @@ public class BattleController : MonoBehaviour
     EncounterData _encounter;
     List<Enemy> currentEnemies;
 
-    public Transform EnemySpawnPoint;
+    public List<Transform> EnemySpawnPoints;
     public GameObject EnergyUI;
     public GameObject EndTurnButton;
     public UnityEvent<Enemy> EnemyClickedEvent;
@@ -26,7 +27,7 @@ public class BattleController : MonoBehaviour
         Instance = this;
     }
 
-    public ITarget GetRandomEnemy(Enemy enemy)
+    public Target GetRandomEnemy(Enemy enemy)
     {
         if (currentEnemies.Count > 1)
         {
@@ -51,14 +52,24 @@ public class BattleController : MonoBehaviour
     private void SetupBattle()
     {
         currentEnemies = new List<Enemy>();
+        var count = _encounter.enemies.Count;
+        List<Transform> spawnPoints;
+        if (count == 1)
+            spawnPoints = new List<Transform> { EnemySpawnPoints[2] };
+        else if (count == 2)
+            spawnPoints = new List<Transform> { EnemySpawnPoints[1], EnemySpawnPoints[3] };
+        else
+            spawnPoints = new List<Transform> { EnemySpawnPoints[0], EnemySpawnPoints[2], EnemySpawnPoints[4] };
+        int i = 0;
         foreach (EnemyData enemy in _encounter.enemies)
         {
-            Enemy newEnemy = Instantiate(_enemyPrefab, EnemySpawnPoint).GetComponent<Enemy>();
+            Enemy newEnemy = Instantiate(_enemyPrefab, spawnPoints[i]).GetComponent<Enemy>();
             newEnemy.Setup(this, enemy, _player);
             newEnemy.PlanNextAttack();
             currentEnemies.Add(newEnemy);
+            i++;
         }
-        _player.SetDeckForBattle();
+        _player.StartCombat();
         PlayerTurn();
     }
 
@@ -73,18 +84,25 @@ public class BattleController : MonoBehaviour
     {
         foreach (Enemy enemy in currentEnemies)
         {
-            enemy.ResetDefense();
+            enemy.StartTurn();
         }
+        StartCoroutine(DoEnemiesAttackAnimations());
+    }
+
+    private IEnumerator DoEnemiesAttackAnimations()
+    {
         foreach (Enemy enemy in currentEnemies)
         {
             enemy.ExecuteIntendedAttack();
+            yield return new WaitForSeconds(1);
             if (_player.IsDefeated())
             {
                 EndEnemyTurn();
-                return;
+                yield break;
             }
         }
         EndEnemyTurn();
+        yield return null;
     }
 
     public void EndPlayerTurn()
@@ -112,6 +130,14 @@ public class BattleController : MonoBehaviour
         }
         PlayerTurn();
     }
+    public void OnPlayerDeath()
+    {
+        _player.DiscardHand();
+        EnergyUI.SetActive(false);
+        EndTurnButton.SetActive(false);
+
+        EndBattle(false);
+    }
 
     public void OnEnemyDeath(Enemy enemy)
     {
@@ -122,6 +148,7 @@ public class BattleController : MonoBehaviour
 
     private void EndBattle(bool victory)
     {
+        _player.OnBattleEnd();
         if (victory) // Victory
         {
             _roomManager.GenerateNewChest(_encounter.Type);
@@ -129,11 +156,11 @@ public class BattleController : MonoBehaviour
         else // Defeat
         {
             ResetArena();
-            GameManager.Instance.EndRun();
+            GameManager.Instance.EndRun(false);
         }
     }
 
-    private void ResetArena()
+    public void ResetArena()
     {
         _player.DiscardHand();
         var enemies = currentEnemies.Count;
@@ -148,4 +175,5 @@ public class BattleController : MonoBehaviour
     {
         return _player.IsDefeated() || currentEnemies.Count == 0;
     }
+
 }

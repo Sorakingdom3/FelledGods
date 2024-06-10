@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2348b55cde4b024ea355e0e6e291b10, type: 3}
+  m_Name: Blood Pact
+  m_EditorClassIdentifier: 
+  Id: C0024
+  Name: Blood Pact
+  Description: 
+  Cost: 0
+  CardSprite: {fileID: 21300000, guid: 89e7e62ab04bf584fb23b4d37d3e8978, type: 3}
+  BorderSprite: {fileID: -1336848499, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
+  Type: 0
+  Class: 0
+  Rarity: 0
+  Level: 0
+  ExhaustsBase: 1
+  ExhaustsEnhanced: 1
+  Effects:
+  - rid: 6257902369853145098
+  - rid: 6257902369853145099
+  - rid: 6257902369853145100
+  references:
+    version: 2
+    RefIds:
+    - rid: 6257902369853145098
+      type: {class: DamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        Amount:
+          BaseAmount: 6
+          EnchantedAmount: 6
+        Level: 0
+        TargetType: 3
+        StatType: 6
+    - rid: 6257902369853145099
+      type: {class: EnergyEffect, ns: , asm: Assembly-CSharp}
+      data:
+        Amount:
+          BaseAmount: 2
+          EnchantedAmount: 2
+        Level: 0
+        TargetType: 3
+        StatType: 6
+    - rid: 6257902369853145100
+      type: {class: DrawCardEffect, ns: , asm: Assembly-CSharp}
+      data:
+        Amount:
+          BaseAmount: 3
+          EnchantedAmount: 5
+        Level: 0
+        TargetType: 3
+        StatType: 6

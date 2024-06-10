@@ -69,7 +69,8 @@ public class ShopController : MonoBehaviour, IRoom
     {
         foreach (var item in _shopItems)
         {
-            Destroy(item.gameObject);
+            if (item != null)
+                Destroy(item.gameObject);
         }
         _shopItems.Clear();
     }

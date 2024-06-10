@@ -70,7 +70,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -224,7 +224,7 @@ TextureImporter:
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 32, y: 36, z: 35, w: 27}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -299,7 +299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelCardAssest_V01_9
+      name: heart
       rect:
         serializedVersion: 2
         x: 429
@@ -761,7 +761,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelCardAssest_V01_31
+      name: ruby
       rect:
         serializedVersion: 2
         x: 467
@@ -1412,7 +1412,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pixelCardAssest_V01_62
+      name: bronzeSword
       rect:
         serializedVersion: 2
         x: 522
@@ -1982,6 +1982,8 @@ TextureImporter:
       StonePlate2: 940919849
       TextSlot: 395063890
       WeaponIcon: 1668519160
+      bronzeSword: 73797262
+      heart: -1618056811
       pixelCardAssest_V01_0: 1288876834
       pixelCardAssest_V01_1: -1336848499
       pixelCardAssest_V01_10: 799424168
@@ -2003,7 +2005,6 @@ TextureImporter:
       pixelCardAssest_V01_26: 1239080317
       pixelCardAssest_V01_27: 224908323
       pixelCardAssest_V01_3: 704849585
-      pixelCardAssest_V01_31: -1850031091
       pixelCardAssest_V01_32: -1474100233
       pixelCardAssest_V01_33: -995067042
       pixelCardAssest_V01_34: -1007396183
@@ -2034,7 +2035,6 @@ TextureImporter:
       pixelCardAssest_V01_6: 1941821378
       pixelCardAssest_V01_60: -2060097821
       pixelCardAssest_V01_61: 495332900
-      pixelCardAssest_V01_62: 73797262
       pixelCardAssest_V01_64: 177916898
       pixelCardAssest_V01_65: -631600415
       pixelCardAssest_V01_66: -1553033187
@@ -2055,7 +2055,7 @@ TextureImporter:
       pixelCardAssest_V01_82: 1822856130
       pixelCardAssest_V01_83: -1570431417
       pixelCardAssest_V01_84: -503485657
-      pixelCardAssest_V01_9: -1618056811
+      ruby: -1850031091
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

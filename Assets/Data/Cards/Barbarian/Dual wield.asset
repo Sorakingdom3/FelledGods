@@ -20,8 +20,10 @@ MonoBehaviour:
   BorderSprite: {fileID: -1336848499, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
   Type: 0
   Class: 0
-  Rarity: 1
+  Rarity: 0
   Level: 0
+  ExhaustsBase: 0
+  ExhaustsEnhanced: 0
   Effects:
   - rid: 8509985036023365797
   - rid: 8509985036023365798
@@ -34,8 +36,8 @@ MonoBehaviour:
         Amount:
           BaseAmount: 5
           EnchantedAmount: 7
+        Level: 0
         TargetType: 0
-        HasStatModifier: 1
         StatType: 0
     - rid: 8509985036023365798
       type: {class: DamageEffect, ns: , asm: Assembly-CSharp}
@@ -43,6 +45,6 @@ MonoBehaviour:
         Amount:
           BaseAmount: 3
           EnchantedAmount: 5
+        Level: 0
         TargetType: 0
-        HasStatModifier: 0
         StatType: 0

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2348b55cde4b024ea355e0e6e291b10, type: 3}
+  m_Name: Critical Hit
+  m_EditorClassIdentifier: 
+  Id: C0022
+  Name: Critical hit
+  Description: 
+  Cost: 2
+  CardSprite: {fileID: 1157093104, guid: f0954b94031095642a90c789fab3ca3f, type: 3}
+  BorderSprite: {fileID: -1336848499, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
+  Type: 0
+  Class: 0
+  Rarity: 1
+  Level: 0
+  ExhaustsBase: 0
+  ExhaustsEnhanced: 0
+  Effects:
+  - rid: 6257902369853145094
+  - rid: 6257902369853145095
+  - rid: 6257902369853145096
+  references:
+    version: 2
+    RefIds:
+    - rid: 6257902369853145094
+      type: {class: DamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        Amount:
+          BaseAmount: 11
+          EnchantedAmount: 11
+        Level: 0
+        TargetType: 0
+        StatType: 6
+    - rid: 6257902369853145095
+      type: {class: WeaknessEffect, ns: , asm: Assembly-CSharp}
+      data:
+        Amount:
+          BaseAmount: 1
+          EnchantedAmount: 2
+        Level: 0
+        TargetType: 0
+        StatType: 6
+    - rid: 6257902369853145096
+      type: {class: VulnerableEffect, ns: , asm: Assembly-CSharp}
+      data:
+        Amount:
+          BaseAmount: 1
+          EnchantedAmount: 2
+        Level: 0
+        TargetType: 0
+        StatType: 6

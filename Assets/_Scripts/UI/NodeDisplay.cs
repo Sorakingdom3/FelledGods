@@ -95,9 +95,9 @@ public class NodeDisplay : MonoBehaviour
         if (_button.interactable)
         {
             if (growing)
-                _rectTransform.sizeDelta = Vector2.Lerp(_rectTransform.sizeDelta, TopSize, .01f);
+                _rectTransform.sizeDelta = Vector2.Lerp(_rectTransform.sizeDelta, TopSize, 1f * Time.deltaTime);
             else
-                _rectTransform.sizeDelta = Vector2.Lerp(_rectTransform.sizeDelta, originalSize, .01f);
+                _rectTransform.sizeDelta = Vector2.Lerp(_rectTransform.sizeDelta, originalSize, 1f * Time.deltaTime);
 
             if ((growing && TopSize.y - _rectTransform.sizeDelta.y < 5) || (!growing && _rectTransform.sizeDelta.y - originalSize.y < 5))
             {

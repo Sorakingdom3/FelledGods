@@ -49,7 +49,7 @@ public class LootController : MonoBehaviour
                 _cardCommon.SetActive(true);
                 break;
         }
-        _goldButtonText.SetText($"<sprite=10> {_gold} Gold coins");
+        _goldButtonText.SetText($"<sprite=18> {_gold} Gold coins");
         _goldButton.SetActive(true);
         gameObject.SetActive(true);
     }

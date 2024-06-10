@@ -15,13 +15,15 @@ MonoBehaviour:
   Id: C0007
   Name: Hit and Run
   Description: 
-  Cost: 0
+  Cost: 1
   CardSprite: {fileID: 73797262, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
   BorderSprite: {fileID: -1336848499, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
   Type: 0
   Class: 0
   Rarity: 0
   Level: 0
+  ExhaustsBase: 0
+  ExhaustsEnhanced: 0
   Effects:
   - rid: 8509985036023365795
   - rid: 8509985036023365796
@@ -34,15 +36,15 @@ MonoBehaviour:
         Amount:
           BaseAmount: 3
           EnchantedAmount: 5
+        Level: 0
         TargetType: 0
-        HasStatModifier: 1
         StatType: 0
     - rid: 8509985036023365796
       type: {class: DefenseEffect, ns: , asm: Assembly-CSharp}
       data:
         Amount:
-          BaseAmount: 5
-          EnchantedAmount: 7
+          BaseAmount: 3
+          EnchantedAmount: 5
+        Level: 0
         TargetType: 3
-        HasStatModifier: 1
         StatType: 1

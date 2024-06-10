@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,10 +12,14 @@ public class EnemyUI : MonoBehaviour
     [SerializeField] Slider _healthbar;
     [SerializeField] TextMeshProUGUI _defenseText;
     [SerializeField] GameObject _defenseIconObject;
+    [SerializeField] GameObject _buffPrefab;
+    [SerializeField] Transform _buffContainer;
+    [SerializeField] List<BuffDisplay> _buffs;
 
     [SerializeField] Sprite _damageIcon;
     [SerializeField] Sprite _defenseIcon;
     [SerializeField] Sprite _healIcon;
+
     public void Set(EnemyData enemyData)
     {
         _image.sprite = enemyData.Sprite;
@@ -48,14 +53,47 @@ public class EnemyUI : MonoBehaviour
             _intentionIcon.sprite = _healIcon;
 
         }
-        if (intendedAction.HasStatModifier)
+        if (intendedAction.StatType != Enums.Stat.None)
         {
-            int amount = intendedAction.Amount.BaseAmount + stats.GetModifier(intendedAction.StatType);
+            int amount = intendedAction.GetAmount() + stats.GetModifier(intendedAction.StatType);
             _intentionText.SetText(amount.ToString());
         }
         else
         {
-            _intentionText.SetText(intendedAction.Amount.BaseAmount.ToString());
+            _intentionText.SetText(intendedAction.GetAmount().ToString());
+        }
+    }
+
+    public void AddNewBuff(ModifierEffect effect)
+    {
+        GameObject buff = Instantiate(_buffPrefab, _buffContainer);
+        var display = buff.GetComponent<BuffDisplay>();
+        display.Setup(effect.GetBuffType(), effect.GetDisplayValue());
+        _buffs.Add(display);
+    }
+
+    public void UpdateBuff(ModifierEffect effect)
+    {
+        var buff = _buffs.Find(b => b.GetBuffType() == effect.GetBuffType());
+        if (buff != null)
+        {
+            buff.UpdateValue(effect.GetDisplayValue());
+        }
+    }
+
+    public void RemoveBuff(Enums.BuffType buff)
+    {
+        BuffDisplay display = _buffs.Find(b => b.GetBuffType() == buff);
+        _buffs.Remove(display);
+        Destroy(display.gameObject);
+    }
+
+    public void ClearBuffs()
+    {
+        while (_buffs.Count > 0)
+        {
+            Destroy(_buffs[0]);
+            _buffs.RemoveAt(0);
         }
     }
 }

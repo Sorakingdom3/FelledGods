@@ -20,7 +20,9 @@ public static class Enums
         Constitution = 2,
         Intelligence = 3,
         Wisdom = 4,
-        Charisma = 5
+        Charisma = 5,
+        None = 6
+
     }
     [Serializable]
     public enum Difficulties
@@ -101,23 +103,24 @@ public static class Enums
     [Serializable]
     public enum BuffType
     {
-        //Buffs
-        Stat_Improvement = 0,
-        Stat_Decrease = 1,
-        DamageIncrease = 2,
-        DamageDecrease = 3,
-        //Debuff
-        Expirates = 10 // Card goes to exhausted pile
-
+        //Buffs 
+        Strength,     // Do more damage
+        Sturdy,   // Recieve more shield
+        Nurtured, // Heal more
+        Rage, // Get Strength each Turn
+        //Debuff 
+        Vulnerable, // Recieve More damage
+        Weakness,  // Do less damage
+        Fragile,   // Recieve less shield  
+        Malnourished // Heal less
     }
     [Serializable]
     public enum EffectDuration
     {
         Instant = 0,
-        Round = 1,
-        Multiple_Rounds = 2,
-        Combat = 3,
-        Permanent = 4
+        Rounds = 1,
+        Battle = 2,
+        Permanent = 3
     }
     [Serializable]
     public enum LootType

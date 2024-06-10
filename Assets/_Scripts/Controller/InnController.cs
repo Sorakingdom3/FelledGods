@@ -27,7 +27,10 @@ public class InnController : MonoBehaviour, IRoom
         gameObject.SetActive(false);
         _roomManager.CompleteRoom();
     }
+    public void OnCardRemoved()
+    {
 
+    }
     public void OpenInn(RoomManager roomManager)
     {
         gameObject.SetActive(true);

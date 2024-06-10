@@ -10,6 +10,7 @@ public class ClassData : ScriptableObjectBase
     public int BaseHealth;
     public int BaseEnergy;
     public int BaseHandSize;
+    public int BaseGold;
     public Stats BaseStats;
     public Sprite Sprite;
     public CardData[] BaseDeck;
