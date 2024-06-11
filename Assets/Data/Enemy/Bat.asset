@@ -43,15 +43,15 @@ MonoBehaviour:
         Amount:
           BaseAmount: 3
           EnchantedAmount: 0
+        Level: 0
         TargetType: 0
-        HasStatModifier: 1
         StatType: 1
     - rid: 8509985036023365819
       type: {class: DefenseEffect, ns: , asm: Assembly-CSharp}
       data:
         Amount:
-          BaseAmount: 8
+          BaseAmount: 4
           EnchantedAmount: 0
+        Level: 0
         TargetType: 3
-        HasStatModifier: 1
         StatType: 1

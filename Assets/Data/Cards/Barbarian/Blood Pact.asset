@@ -18,7 +18,7 @@ MonoBehaviour:
   Cost: 0
   CardSprite: {fileID: 21300000, guid: 89e7e62ab04bf584fb23b4d37d3e8978, type: 3}
   BorderSprite: {fileID: -1336848499, guid: fa5327aa13c560f4caf79907eb1a07c4, type: 3}
-  Type: 0
+  Type: 2
   Class: 0
   Rarity: 0
   Level: 0

@@ -36,5 +36,5 @@ MonoBehaviour:
           BaseAmount: 4
           EnchantedAmount: 6
         Level: 0
-        TargetType: 0
+        TargetType: 3
         StatType: 0

@@ -60,24 +60,8 @@ public class CardData : ScriptableObjectBase
 
     public static CardData CopyOf(CardData cardToCopy)
     {
-
-        CardData card = CreateInstance<CardData>();
-        card.Id = cardToCopy.Id;
-        card.Name = cardToCopy.Name;
-        card.Description = cardToCopy.Description;
-        card.CardSprite = cardToCopy.CardSprite;
-        card.BorderSprite = cardToCopy.BorderSprite;
-        card.Cost = cardToCopy.Cost;
-        card.Type = cardToCopy.Type;
-        card.Class = cardToCopy.Class;
-        card.Rarity = cardToCopy.Rarity;
-        card.Level = cardToCopy.Level;
-        card.Effects = new List<Effect>();
-        foreach (var effect in cardToCopy.Effects)
-        {
-            card.Effects.Add(effect);
-        }
-        return card;
+        CardData copy = Instantiate(cardToCopy);
+        return copy;
     }
 
     public void Enchant()

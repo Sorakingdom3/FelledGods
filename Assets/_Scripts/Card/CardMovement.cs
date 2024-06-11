@@ -45,10 +45,12 @@ public class CardMovement : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
                 }
                 else if (Input.GetMouseButtonDown(0) && !(_rectTransform.localPosition.y > _cardPlay.y))
                 {
+                    Unselect();
                     TransitionToState0();
                 }
                 else if (Input.GetMouseButtonDown(1))
                 {
+                    Unselect();
                     TransitionToState0();
                 }
                 break;
@@ -56,6 +58,7 @@ public class CardMovement : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
                 HandleAttackMovement();
                 if (Input.GetMouseButtonDown(1))
                 {
+                    Unselect();
                     TransitionToState0();
                 }
                 break;
@@ -134,7 +137,15 @@ public class CardMovement : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
     private void PlayCard(Enemy enemy)
     {
         _player._battleController.EnemyClickedEvent.RemoveListener(PlayCard);
+        Unselect();
         _player.PlayCard(_card, _player, enemy);
+    }
+
+    public void Unselect()
+    {
+        TransitionToState0();
+        _player._battleController.EnemyClickedEvent.RemoveListener(PlayCard);
+        _player.SelectedCard = null;
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -142,8 +153,11 @@ public class CardMovement : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
         if (_currentState == 1)
         {
             _currentState = 2;
-            _canvas.overrideSorting = true;
-            _canvas.sortingOrder = 2;
+            if (_player.SelectedCard != null)
+            {
+                _player.SelectedCard.Unselect();
+            }
+            _player.SelectedCard = this;
             _player._battleController.EnemyClickedEvent.AddListener(PlayCard);
             RectTransformUtility.ScreenPointToLocalPointInRectangle(_canvas.GetComponent<RectTransform>(), eventData.position, eventData.pressEventCamera, out OriginalPointerLocalPosition);
             OriginalPanelLocalPosition = _rectTransform.localPosition;

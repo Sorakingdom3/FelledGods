@@ -22,13 +22,13 @@ public class ShopController : MonoBehaviour, IRoom
         var classCards = DataManager.Instance.GetClassCards(GameManager.Instance.Player.GetClass());
         var common = classCards.Where(c => c.Rarity == Enums.RarityType.Common).ToList();
         var rare = classCards.Where(c => c.Rarity == Enums.RarityType.Rare).ToList();
-        var legendary = classCards.Where(c => c.Rarity == Enums.RarityType.Legendary).ToList();
+
         for (int i = 0; i < 7; i++)
         {
             var chosenCard = common[Random.Range(0, common.Count())];
             common.Remove(chosenCard);
             var item = Instantiate(_shopItemPrefab, _shopContainer).GetComponent<ShopItem>();
-            item.Setup(Enums.LootType.Cards, chosenCard, Random.Range(45, 55));
+            item.Setup(Enums.LootType.Cards, CardData.CopyOf(chosenCard), Random.Range(45, 55));
             _shopItems.Add(item);
         }
         for (int i = 0; i < 3; i++)
@@ -36,7 +36,7 @@ public class ShopController : MonoBehaviour, IRoom
             var chosenCard = rare[Random.Range(0, rare.Count())];
             rare.Remove(chosenCard);
             var item = Instantiate(_shopItemPrefab, _shopContainer).GetComponent<ShopItem>();
-            item.Setup(Enums.LootType.Cards, chosenCard, Random.Range(45, 55));
+            item.Setup(Enums.LootType.Cards, CardData.CopyOf(chosenCard), Random.Range(45, 55));
             _shopItems.Add(item);
         }
 

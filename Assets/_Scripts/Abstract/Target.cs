@@ -98,12 +98,12 @@ public abstract class Target : MonoBehaviour
         if (!Buffs.ContainsKey(effect.GetBuffType()))
         {
             Buffs.Add(effect.GetBuffType(), effect);
-            UpdateBuffUI(true, effect);
+            UpdateBuffUI(true, Buffs[effect.GetBuffType()]);
         }
         else
         {
             Buffs[effect.GetBuffType()].Stack(effect);
-            UpdateBuffUI(false, effect);
+            UpdateBuffUI(false, Buffs[effect.GetBuffType()]);
         }
     }
 

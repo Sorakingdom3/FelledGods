@@ -12,6 +12,7 @@ public class Player : Target
     int _maxEnergy;
     int _energy;
     public int Gold { get; set; }
+    public CardMovement SelectedCard;
 
     public void Setup(ClassData classData)
     {

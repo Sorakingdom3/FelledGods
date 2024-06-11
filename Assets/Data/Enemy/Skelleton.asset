@@ -34,7 +34,6 @@ MonoBehaviour:
   - rid: 8509985051544911872
   - rid: 8509985051544911873
   - rid: 8509985051544911874
-  - rid: 8509985051544911875
   Type: 0
   references:
     version: 2
@@ -45,8 +44,8 @@ MonoBehaviour:
         Amount:
           BaseAmount: 8
           EnchantedAmount: 0
+        Level: 0
         TargetType: 0
-        HasStatModifier: 1
         StatType: 0
     - rid: 8509985051544911873
       type: {class: DamageEffect, ns: , asm: Assembly-CSharp}
@@ -54,8 +53,8 @@ MonoBehaviour:
         Amount:
           BaseAmount: 4
           EnchantedAmount: 0
+        Level: 0
         TargetType: 0
-        HasStatModifier: 1
         StatType: 0
     - rid: 8509985051544911874
       type: {class: DefenseEffect, ns: , asm: Assembly-CSharp}
@@ -63,15 +62,6 @@ MonoBehaviour:
         Amount:
           BaseAmount: 6
           EnchantedAmount: 0
+        Level: 0
         TargetType: 3
-        HasStatModifier: 1
         StatType: 1
-    - rid: 8509985051544911875
-      type: {class: DefenseEffect, ns: , asm: Assembly-CSharp}
-      data:
-        Amount:
-          BaseAmount: 10
-          EnchantedAmount: 0
-        TargetType: 3
-        HasStatModifier: 0
-        StatType: 0

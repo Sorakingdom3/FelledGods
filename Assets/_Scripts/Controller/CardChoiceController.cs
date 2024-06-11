@@ -18,7 +18,7 @@ public class CardChoiceController : MonoBehaviour
         foreach (var card in choiceList)
         {
             var data = classCards[Random.Range(0, classCards.Count)];
-            card.Setup(data);
+            card.Setup(CardData.CopyOf(data));
             classCards.Remove(data);
         }
     }
