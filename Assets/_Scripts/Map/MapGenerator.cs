@@ -97,6 +97,10 @@ public class MapGenerator
                     {
                         usedCandidates.Add(SetRoomTypeRandomly(nextRoom, usedCandidates));
                     }
+                    else
+                    {
+                        usedCandidates.Add(nextRoom.Type);
+                    }
                 }
             }
         }
