@@ -163,11 +163,14 @@ public class BattleController : MonoBehaviour
     public void ResetArena()
     {
         _player.DiscardHand();
-        var enemies = currentEnemies.Count;
-        for (int i = 0; i < enemies; i++)
+        if (currentEnemies != null)
         {
-            Destroy(currentEnemies[0].gameObject);
-            currentEnemies.RemoveAt(0);
+            var enemies = currentEnemies.Count;
+            for (int i = 0; i < enemies; i++)
+            {
+                Destroy(currentEnemies[0].gameObject);
+                currentEnemies.RemoveAt(0);
+            }
         }
     }
 
